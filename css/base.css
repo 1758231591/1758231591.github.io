@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body {
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: #36b1da;
+}
+
+a:hover {
+  color: #36b1da;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}

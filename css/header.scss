@@ -1,0 +1,20 @@
+$back-col:#525252;
+$nav-wh:40px;
+div.nav {
+    width: 100%;
+    min-width: 1200px;
+    div:first-child {
+        height: $nav-wh;
+        background-color: $back-col;
+        ul {
+            margin-left:50px;
+            li {
+                height: $nav-wh;
+                width: $nav-wh*2;
+                float: left;
+                color: white;
+                line-height: $nav-wh;
+            }
+        }
+    }
+}

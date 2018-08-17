@@ -1,0 +1,21 @@
+div.nav {
+  width: 100%;
+  min-width: 1200px;
+}
+
+div.nav div:first-child {
+  height: 40px;
+  background-color: #525252;
+}
+
+div.nav div:first-child ul {
+  margin-left: 50px;
+}
+
+div.nav div:first-child ul li {
+  height: 40px;
+  width: 80px;
+  float: left;
+  color: white;
+  line-height: 40px;
+}
