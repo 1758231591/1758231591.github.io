@@ -1,3 +1,4 @@
+import { digits } from "digits.js";
 (() => {
   var window_width = window.innerWidth;
   var window_height = 600;
@@ -7,7 +8,7 @@
   var margin_top = Math.round(window_height / 5);
   var margin_left = Math.round(window_width / 10);
   const endTime = new Date(); //月份0 - 11
-  endTime.setTime(endTime.getTime() + 480 * 1000);
+  endTime.setTime(endTime.getTime() + 86400 * 1000);
   var curShowTimeSeconds = 0;
 
   //小球
@@ -93,9 +94,9 @@
   }
   //生成小球
   function addBalls(x, y, num) {
-    for (var i = 0; i < digit[num][i].length; i++) {
-      for (var j = 0; j < digit[num][j].length; j++) {
-        if (digit[num][i][j] == 1) {
+    for (let i = 0; i < digits[num][i].length; i++) {
+      for (let j = 0; j < digits[num][j].length; j++) {
+        if (digits[num][i][j] == 1) {
           var aBall = {
             x: x + j * 2 * (radius + 1) + (radius + 1),
             y: y + i * 2 * (radius + 1) + (radius + 1),
@@ -141,9 +142,9 @@
   //遍历数组绘制需要的数字
   function renderDigit(x, y, num, cxt) {
     cxt.fillStyle = "rgb(0, 102, 153)";
-    for (var i = 0; i < digit[num].length; i++) {
-      for (var j = 0; j < digit[num][i].length; j++) {
-        if (digit[num][i][j] == 1) {
+    for (let i = 0; i < digits[num].length; i++) {
+      for (let j = 0; j < digits[num][i].length; j++) {
+        if (digits[num][i][j] == 1) {
           cxt.beginPath();
           cxt.arc(x + j * 2 * (radius + 1), y + i * 2 * (radius + 1) + (radius + 1), radius, 0, 2 * Math.PI);
           cxt.closePath();
