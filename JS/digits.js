@@ -1,4 +1,4 @@
-const digit = [
+const digits = [
   [
     [0, 0, 1, 1, 1, 0, 0],
     [0, 1, 1, 0, 1, 1, 0],
@@ -132,4 +132,4 @@ const digit = [
     [0, 0, 0, 0],
   ], //:
 ];
-export { digit };
+export { digits };
