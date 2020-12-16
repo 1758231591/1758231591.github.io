@@ -1,3 +1,1 @@
-# My Blog
-
-[My](https://1758231591.github.io/)
+# [My Blog]( https://1758231591.github.io/blog/)
