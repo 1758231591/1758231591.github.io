@@ -15,7 +15,6 @@ import { digits } from "./digits.js";
   var balls = [];
   const colors = ["#33b5e5", "#0099cc", "#a6c", "#93c", "#9c0", "#690", "#fb3", "#f80", "#f44", "#c00"];
 
-  //#endregion
   canvas.width = window_width;
   canvas.height = window_height;
   curShowTimeSeconds = getTimeSec();
@@ -115,9 +114,10 @@ import { digits } from "./digits.js";
     cxt.clearRect(0, 0, window_width, window_height);
 
     //把秒转换为时, 分, 秒
-    var hours = parseInt(curShowTimeSeconds / 3600);
-    var minutes = parseInt((curShowTimeSeconds - hours * 3600) / 60);
-    var seconds = curShowTimeSeconds % 60;
+    const date = new Date();
+    var hours = parseInt(date.getHours());
+    var minutes = parseInt(date.getMinutes());
+    var seconds = date.getSeconds();
 
     renderDigit(margin_left, margin_top, parseInt(hours / 10), cxt);
     renderDigit(margin_left + 15 * (radius + 1), margin_top, parseInt(hours % 10), cxt);

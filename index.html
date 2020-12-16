@@ -10,10 +10,23 @@
         padding: 0;
         margin: 0;
       }
+      div.header {
+        width: 100vw;
+        height: 100vh;
+      }
     </style>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <div class="header">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="./JS/canvas.js"></script>
   </body>
-  <script type="module" src="./JS/canvas.js"></script>
+  <script>
+    window.addEventListener("beforeunload", function (e) {
+      var confirmationMessage = "\o/";
+      (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+      return confirmationMessage; //Webkit, Safari, Chrome etc.
+    });
+  </script>
 </html>
