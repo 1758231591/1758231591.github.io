@@ -1,4 +1,4 @@
-import { digits } from "digits.js";
+import { digits } from "./digits.js";
 (() => {
   var window_width = window.innerWidth;
   var window_height = 600;
